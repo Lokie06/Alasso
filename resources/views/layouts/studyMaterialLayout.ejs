@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <!-- <title>Alasso</title> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css" >
+    <!-- <link rel="stylesheet" href="popup.html"> -->
+    <link rel="icon" href="/Images/A.png" type="image/x-icon">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7181754752412588"
+       crossorigin="anonymous"></script>
+       <base href="/">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-65K7G7360W"></script>
+
+    <style>
+        body::-webkit-scrollbar {
+            display: none;
+          }
+
+          main{
+            min-height: calc(100vh - 80.8px - 217.2px);
+            margin-top: '20px';
+          }
+
+    </style>
+
+
+</head>
+<body>
+    <%- include('../partials/navbar.ejs') %>
+
+    <main>
+
+        <%- body %>
+
+    </main>
+
+
+
+    <%- include('../partials/footer.ejs') %>
+
+    <script  src="/js/app.js"></script>
+    <script  src="/js/APIjs.js"></script>
+
+</body>
+</html>

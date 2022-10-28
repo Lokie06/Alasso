@@ -1,0 +1,113 @@
+<style>
+    .contest-content,
+    .contest-content li button {
+        color: wheat;
+    }
+
+    .box-container {
+        margin-top: 5%;
+    }
+
+    .left-col ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 1% 5%;
+    }
+
+    .left-col center {
+        color: white;
+        font-weight: bold;
+        font-size: larger;
+    }
+
+    .contest-content li button {
+        background: transparent;
+        padding: .5em .9em;
+    }
+
+
+    .contest-content li button:hover {
+        color: white;
+        background-color: wheat;
+        color: black;
+        cursor: pointer;
+    }
+
+    .left-col,
+    .right-col {
+        border: 1px solid wheat;
+        margin: 2% 0;
+    }
+
+    .content span {
+        color: white;
+    }
+    .container a{
+        margin-top: 5%;
+    }
+    .container .plat{
+        margin-top: 5%;
+        color: white;
+    }
+    .show {
+        display: block;
+    }
+
+    .hide {
+        display: none;
+    }
+</style>
+
+
+<!-- 
+
+    <div class="contest">
+        <div class="left-col">
+            <center>Platforms</center>
+            <ul class="contest-content">
+                <li><button class="co-btn">Code Forces</button></li>
+                <li><button class="co-btn">CodeChef</button></li>
+                <li><button class="co-btn">HackerRank</button></li>
+                <li><button onclick="filter('HackerEarth')" class="co-btn">HackerEarth</button></li>
+                <li><button class="co-btn">Kick Start</button></li>
+                <li><button class="co-btn">LeetCode</button></li>
+                <li><button class="co-btn">At Coder</button></li>
+            </ul>
+        </div>
+    </div>
+
+ -->
+ 
+
+
+
+<div class="container">
+    <div class="box-container">
+        <% contest.forEach(function(data){ %>
+            
+            <div class="box">
+                <div class="content">
+                    <h2>
+                        <%= data.name %>
+                    </h2>
+                    <h4 class="plat"> PLATFORM:  <%= data.site %> </h4><br>
+                    <span>Starts: <%= data.start_time.slice(0,10) %> </span><br>
+                    <span>Ends: <%= data.end_time.slice(0,10) %> </span><br>
+                    <a target="_blank" href="<%= data.url %>" class="btn">CLICK TO VISIT</a>
+                    <div class="icons">
+                        <span><i class="fas fa-calendar"></i>Last Updated: 20th August, 2022</span> 
+                    </div>
+                </div>
+            </div>
+            
+        <% }) %>
+
+
+
+        
+    </div>
+    <div id="load-more">Load More</div>
+</div>
+
+
+

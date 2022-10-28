@@ -1,0 +1,55 @@
+
+<style>
+  .my-1{
+    margin-bottom: 15px;
+  }
+  .content{
+    color: white;
+  }
+</style>
+
+<div id="loading"></div>
+
+
+
+
+<!-- CARDS -->
+<div class="container my-1">
+
+  <h1 class="heading">Meet the Team Alasso</h1>
+
+  <div class="box-container">
+
+    <% developerData.forEach(function(dev){ %>
+
+      <div class="box">
+        <img src="/Images/AvatarMaker.png" alt="Avatar" style="width: 150px;">
+        <div class="content">
+          <h2><%= dev.name%></h2>
+          <h4><%= dev.year%>nd year, <%= dev.course%></h4>
+          <h4><%= dev.role%></h4>
+          <ul class="socials">
+            <!-- <li><a href="#"><i class="fa fa-github"></i></a></li> -->
+            <li><a href="<%= dev.linkedin%>" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+            <li><a href="<%= dev.instagram%>" target="_blank"><i class="fa fa-instagram"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+  
+    <% }) %>
+
+    
+
+   
+
+
+  </div>
+  <% if(developerData.length > 3){ %>
+  <div id="load-more">Load More</div>
+  <% } %>
+</div>
+
+
+

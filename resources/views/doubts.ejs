@@ -1,0 +1,67 @@
+<style>
+  .container1 {
+    width: 100% !important;
+    max-width: 85rem !important;
+    margin: 0 auto !important;
+    padding: 0 1.5rem !important;
+  }
+
+  .acc-content p {
+    color: black;
+  }
+
+  @media (max-width:250px) {
+    .container {
+      width: 100% !important;
+      max-width: 100rem !important;
+      margin: 0 auto !important;
+      padding: 0 1.5rem !important;
+    }
+
+    .toggle {
+      max-height: 200px;
+    }
+
+    .active {
+      background: #bbb;
+      color: #fff;
+    }
+  }
+</style>
+
+<!-- FAQ -->
+
+<section>
+  <div class="container">
+    <br>
+    <a href="https://discord.gg/bMWNAxp9Uz" target="_blank" class="btn">Join Discord</a>
+
+    <h1 class="heading">Frequently Asked Questions</h1>
+
+    <div class="container1">
+      <div class="accordions">
+
+
+        <% doubt.forEach( (d)=> { %>
+
+          <div class="accordion">
+            <input class="hidden" type="checkbox" id="first">
+            <label class="acc-label" for="first">Q.<%=d.number%>
+                <%=d.question%></label>
+            <div class="acc-content">
+              <p><strong style="color: black;">Answer:</strong>
+                <%= d.answer %> <br> Follow this Link to select Courses: <a href="https://onlinecourses.nptel.ac.in/"
+                    target="_blank"> Click Here!</a>
+              </p>
+            </div>
+          </div>
+
+          <% }) %>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+

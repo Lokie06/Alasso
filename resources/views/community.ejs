@@ -1,0 +1,53 @@
+<style>
+    .container {
+        color: white;
+
+    }
+
+    .container h3{
+        margin-top: 2%;
+    }
+    .container a{
+        margin-top: 2%;
+    }
+
+    .content a{
+        color: white;
+    }
+</style>
+
+<div class="container">
+    <h3>We, The Team Alasso as a Community will be providing you all the best resource all over the internet. In return
+        We just need a favour that please don't get irritated by the ads because it helps us to provide you all with the
+        more resources for gaining skills.</h3>
+
+    <a href="https://forms.gle/CayDX2TgjWErMtneA" target="_blank" class="btn">Request Course</a> <br> <br>
+
+    <div class="box-container">
+
+        <% skillCourse.forEach(function(course){ %>
+            <div class="box">
+                <div class="image">
+                    <a href="/The_Complete_Front-End_Web_Development_Course/full-stack-web.html"><img
+                            src="<%= course.image %>" alt=""></a>
+                </div>
+                <div class="content">
+                    <h2><a href="/The_Complete_Front-End_Web_Development_Course/full-stack-web.html"><%= course.name %></a></h2>
+    
+                    <div class="icons">
+                        <span><i class="fas fa-calendar"></i><%= course.date %></span>
+                        <span><i class="fas fa-user"></i><%= course.team %></span>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+        
+
+    </div>
+    <% if(skillCourse.length > 3)
+    { %>
+    <div id="load-more">Load More</div>
+        
+    <% } %>
+</div>
+
